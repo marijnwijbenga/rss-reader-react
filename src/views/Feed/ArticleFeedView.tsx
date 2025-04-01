@@ -2,10 +2,10 @@ import {useEffect, useState} from "react";
 import {ArticleInterface} from "../../interfaces/article.interface.ts";
 
 import parseArticles from "../../util/parse-articles.util.ts";
-import ArticleSpotlight from "../../components/article/article-spotlight/ArticleSpotlight.tsx";
+import ArticleSpotlight from "../../components/article/ArticleSpotlight/ArticleSpotlight.tsx";
 
 import styles from './Feed.module.css';
-import ArticleListItem from "../../components/article/article-list-item/ArticleListItem.tsx";
+import ArticleListItem from "../../components/article/ArticleListItem/ArticleListItem.tsx";
 
 const CORS_URL: string = 'https://corsproxy.io/?key=9446d2b6&url=';
 const RSS_DOMAIN: string = 'https://feeds.nos.nl/'
@@ -43,16 +43,14 @@ function ArticleFeedView() {
                                 <ArticleSpotlight article={article} key={index}/>
                             )
                         )
-
                     }
                 </section>
-                <section>
+                <section className={styles.list}>
                     {
                         articles.slice(2).map((article, index) => (
                                 <ArticleListItem article={article} key={index}/>
                             )
                         )
-
                     }
                 </section>
             </main>
