@@ -39,16 +39,16 @@ function ArticleFeedView() {
             <main>
                 <section className={styles.spotlight}>
                     {
-                        articles.slice(0, 2).map((article, index) => (
-                                <ArticleSpotlight article={article} key={index}/>
+                        articles.slice(0, 2).map((article) => (
+                                <ArticleSpotlight article={article} key={article.link}/>
                             )
                         )
                     }
                 </section>
                 <section className={styles.list}>
                     {
-                        articles.slice(2).map((article, index) => (
-                                <ArticleListItem article={article} key={index}/>
+                        articles.slice(2).map((article) => (
+                                <ArticleListItem article={article} key={article.link}/>
                             )
                         )
                     }
