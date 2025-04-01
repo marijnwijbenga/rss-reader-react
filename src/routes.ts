@@ -1,14 +1,14 @@
 import {createBrowserRouter} from "react-router";
-import Feed from "./views/Feed.tsx";
-import Article from "./views/Article.tsx";
+import ArticleFeedView from "./views/Feed/ArticleFeedView.tsx";
+import ArticleDetailView from "./views/Detail/ArticleDetailView.tsx";
 
 export const routes = createBrowserRouter([
     {
         path: "/",
-        Component: Feed
+        Component: ArticleFeedView
     },
     {
         path: ":article",
-        Component: Article
+        Component: ArticleDetailView
     }
 ])

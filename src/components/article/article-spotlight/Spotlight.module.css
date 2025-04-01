@@ -1,0 +1,8 @@
+.articleSpotlight {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    max-width: 10rem;
+}

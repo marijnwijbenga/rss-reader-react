@@ -4,5 +4,4 @@ export interface ArticleInterface {
     image: string;
     date?: string;
     link: string;
-
 }

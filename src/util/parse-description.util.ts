@@ -1,7 +1,8 @@
 import sanitizeHtml from "sanitize-html";
 import parse from "html-react-parser";
 
-const parseParagraphs = (p: string) => {
+//  todo error handling
+const parseDescription = (p: string) => {
     const clean = sanitizeHtml(p, {
         allowedTags: ['p', 'h2']
     });
@@ -9,4 +10,4 @@ const parseParagraphs = (p: string) => {
     return parse(clean);
 }
 
-export default parseParagraphs;
+export default parseDescription;
