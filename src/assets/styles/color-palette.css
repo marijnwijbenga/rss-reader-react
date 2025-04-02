@@ -1,0 +1,20 @@
+:root {
+    --pastel-gray-400: rgb(174, 172, 168);
+    --pastel-gray-500: rgb(145, 142, 136);
+
+    --pastel-red-300: rgb(255, 178, 173);
+    --pastel-red-800: rgb(168, 34, 26);
+
+    --pastel-blue-300: rgb(204, 225, 250);
+    --pastel-blue-800: rgb(18, 84, 161);
+
+    --pastel-yellow-50: rgb(255, 251, 240);
+    --pastel-yellow-300: rgb(255, 222, 138);
+    --pastel-yellow-800: rgb(209, 145, 35);
+
+    --pastel-purple-200: rgb(229, 195, 249);
+    --pastel-purple-400: rgb(207, 142, 224);
+    --pastel-purple-600: rgb(181, 83, 238);
+    --pastel-purple-800: rgb(155, 47, 218);
+
+}

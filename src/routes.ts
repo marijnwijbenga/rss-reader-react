@@ -8,7 +8,7 @@ export const routes = createBrowserRouter([
         Component: ArticleFeedView
     },
     {
-        path: ":article",
+        path: "article/:slug",
         Component: ArticleDetailView
     }
 ])

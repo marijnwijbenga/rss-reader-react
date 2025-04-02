@@ -1,0 +1,50 @@
+.article {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0 auto 1rem;
+    width: 80%;
+    max-width: 80rem;
+    border-radius: 2rem;
+}
+
+.listImage {
+    border-radius: 2rem 0 0 2rem;
+    width: 20rem;
+    min-width: 20rem;
+    height: 16rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.listContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.listTitle h1 {
+    color: var(--pastel-purple-600);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-wrap: pretty;
+}
+
+.listDate {
+}
+
+.listDescription {
+}
+
+.listReadMore {
+}
+
+.listReadMore a {
+    text-decoration: none;
+    color: var(--pastel-purple-800);
+}
+
+.listReadmore a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--pastel-purple-600);
+}

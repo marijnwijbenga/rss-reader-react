@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@import 'assets/styles/color-palette.css';
+@import 'assets/styles/reset.css';
+
 html {
     font-size: 16px;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: var(--pastel-yellow-300);
+    background-image: url('@assets/img/doodle-pattern.svg');
+    background-repeat: repeat;
+
+}
+p {
+    padding-bottom: 1rem;
+    font-weight: 500;
 }

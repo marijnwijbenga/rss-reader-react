@@ -1,8 +1,68 @@
 .articleSpotlight {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+    width: 40%;
+    max-width: 34rem;
+    min-width: 25rem;
+    height: 46rem;
+    border-radius: 2rem;
+    background-color: var(--pastel-yellow-50);
+    cursor: pointer;
 }
 
-.image {
-    max-width: 10rem;
+@media (max-width: 1000px) {
+    .articleSpotlight {
+        width: 90%;
+    }
+}
+
+.articleSpotlight:hover {
+    box-shadow: 0 0 0.8rem var(--pastel-yellow-800);
+}
+
+
+.articleSpotlightContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    height: 100%;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.articleSpotlightDate {
+    color: var(--pastel-gray-500);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.articleSpotlightTitle h1 {
+    color: var(--pastel-purple-600);
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-wrap: pretty;
+}
+
+.articleSpotlightDescription {
+
+}
+
+.articleSpotlightReadmore a,
+.articleSpotlightLink a {
+    text-decoration: none;
+    color: var(--pastel-purple-800);
+}
+
+.articleSpotlightReadmore a:hover,
+.articleSpotlightLink a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--pastel-purple-600);
+}
+
+
+.articleSpotlightImage {
+    border-radius: 2rem 2rem 0 0;
+    max-width: 100%;
 }

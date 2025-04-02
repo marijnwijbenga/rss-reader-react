@@ -1,11 +1,9 @@
 import {ArticleInterface} from "../interfaces/article.interface.ts";
 
 const parseArticles = (rssString: string): ArticleInterface[] => {
-    // todo sanitize rssString
-
     const parser = new DOMParser();
-    const xml = parser.parseFromString(rssString, 'text/xml');
-    const items = xml.getElementsByTagName('item');
+    const xml: Document = parser.parseFromString(rssString, 'text/xml');
+    const items: HTMLCollectionOf<Element> = xml.getElementsByTagName('item');
 
     return Array.from(items).map(item => ({
         image: item.querySelector('enclosure')?.getAttribute('url') || '',

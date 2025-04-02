@@ -1,62 +1,62 @@
 import {useEffect, useState} from "react";
 import {ArticleInterface} from "../../interfaces/article.interface.ts";
-
-import parseArticles from "../../util/parse-articles.util.ts";
 import ArticleSpotlight from "../../components/article/ArticleSpotlight/ArticleSpotlight.tsx";
-
-import styles from './Feed.module.css';
+import styles from './ArticleFeed.module.css';
 import ArticleListItem from "../../components/article/ArticleListItem/ArticleListItem.tsx";
-
-const CORS_URL: string = 'https://corsproxy.io/?key=9446d2b6&url=';
-const RSS_DOMAIN: string = 'https://feeds.nos.nl/'
-const RSS_PATHS: string[] = ['jeugdjournaal', 'nosnieuwstech', 'nosnieuwsopmerkelijk'];
-
-const fetchRSS = async () => {
-    // todo error handling
-    const response = await fetch(CORS_URL + RSS_DOMAIN + RSS_PATHS[0]);
-    return await response.text();
-}
+import Alert from "../../components/alert/Alert.tsx";
+import fetchArticles from "../../util/fetch-articles.util.ts";
 
 function ArticleFeedView() {
-    // todo loadingstate
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
     const [articles, setArticles] = useState<ArticleInterface[]>([]);
 
     useEffect(() => {
-        const getData = async () => {
-            const rss = await fetchRSS();
-            const parsed = parseArticles(rss)
-            setArticles(parsed)
+        const getArticles = async () => {
+            try {
+                const articles = await fetchArticles();
+                setArticles(articles);
+                setLoading(false);
+                setError(false);
+            } catch (error) {
+                console.error(error);
+                setLoading(false);
+                setError(true);
+            }
         };
 
-        // todo betere error handling
-        getData().catch(e => console.error(e));
+        getArticles();
 
     }, [])
 
     return (
-        <>
-            {/*TODO: Make layouts */}
-            <main>
-                <section className={styles.spotlight}>
-                    {
-                        articles.slice(0, 2).map((article) => (
-                                <ArticleSpotlight article={article} key={article.link}/>
+        <main>
+            <div className={styles.title}>
+                <h1>N<span style={{color: 'var(--pastel-red-800)'}}>O</span>S JeugdJournaal</h1>
+            </div>
+            {loading && <Alert variant="info">Artikelen aan het ophalen..</Alert>}
+            {!loading && articles.length > 0 && (
+                <>
+                    <section className={styles.spotlight}>
+                        {articles.slice(0, 2).map((article, index) => (
+                                <ArticleSpotlight article={article} key={index}/>
                             )
-                        )
-                    }
-                </section>
-                <section className={styles.list}>
-                    {
-                        articles.slice(2).map((article) => (
-                                <ArticleListItem article={article} key={article.link}/>
+                        )}
+                    </section>
+                    <div className={styles.subTitle}>
+                        <h2>En nog meer nieuws!</h2>
+                    </div>
+                    <section className={styles.list}>
+                        {articles.slice(2).map((article, index) => (
+                                <ArticleListItem article={article} key={index}/>
                             )
-                        )
-                    }
-                </section>
-            </main>
+                        )}
+                    </section>
+                </>
 
-
-        </>
+            )}
+            {error && <Alert variant="error">Oeps, er is iets fout gegaan!</Alert>}
+        </main>
     )
 }
 
