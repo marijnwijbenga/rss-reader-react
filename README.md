@@ -3,6 +3,7 @@
 An RSS feed news reader made with React.
 
 ## todos
+- [ ] use context instead of re-fetching articles in fetchArticle
 - [x] loading states
 - [x] error handling
   - [ ] handle empty feed
