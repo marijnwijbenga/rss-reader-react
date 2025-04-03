@@ -1,0 +1,38 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.menu button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--pastel-purple-200);
+    font-weight: bold;
+    color: var(--pastel-purple-800);
+}
+
+.menu button:hover {
+    background-color: var(--pastel-purple-800);
+    color: var(--pastel-purple-200);
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title h1 {
+    color: var(--pastel-purple-600);
+    font-weight: 800;
+    font-size: 3rem;
+    background-color: var(--pastel-yellow-300);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
