@@ -9,7 +9,7 @@ export const routes = createBrowserRouter([
         Component: App,
         children: [
             {
-                path: "/",
+                index: true,
                 Component: ArticleFeedView
             },
             {
