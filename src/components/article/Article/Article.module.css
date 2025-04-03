@@ -1,8 +1,70 @@
 .article {
     display: flex;
     flex-direction: column;
+    background-color: var(--pastel-yellow-50);
+    width: 70%;
+    margin: 2rem auto;
+    border-radius: 2rem;
+    max-width: 60rem;
 }
 
-.article-image {
+.articleImage {
     display: flex;
+    border-radius: 2rem 2rem 0 0;
+    width: 100%;
+}
+
+.articleTitle {
+    color: var(--pastel-purple-600);
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-wrap: pretty;
+}
+
+.articleContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1.2rem;
+    padding: 2rem 2rem;
+    height: 100%;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.articleDescription p {
+    max-width: 70ch;
+    font-size: 1.15rem;
+}
+
+.articleDescription h2 {
+    font-size: 1.2rem;
+}
+
+
+.articleDate {
+    color: var(--pastel-gray-800);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.articleOriginalLink a {
+    text-decoration: none;
+    color: var(--pastel-purple-800);
+    font-weight: 700;
+}
+
+.articleOriginalLink a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--pastel-purple-600);
+}
+
+@media (max-width: 1000px) {
+    .article {
+        width: 100%;
+        border-radius: 0 0 0 0;
+    }
+
+    .articleImage {
+        border-radius: 0 0 0 0;
+    }
 }

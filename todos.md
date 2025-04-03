@@ -1,0 +1,14 @@
+## Todos
+- [x] use context instead of re-fetching articles in fetchArticle
+- [x] loading states
+- [x] style spotlight component
+- [x] style list component
+- [x] style feed view page
+- [x] handle article detail routing with clean url
+- [x] style detail view page
+- [x] style article detail component
+- [x] add rss feed switcher
+- [ ] add details in readme with features and how to run etc
+- [ ] cleaner word cutoff
+- [ ] skeletons for loading (cards & images)
+- [ ] theme per feed (add tech theme and generic theme)

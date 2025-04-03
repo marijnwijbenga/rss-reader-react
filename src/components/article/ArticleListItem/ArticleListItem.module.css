@@ -1,4 +1,4 @@
-.article {
+.listArticle {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-.article:hover {
+.listArticle:hover {
     box-shadow: 0 0 0.8rem var(--pastel-yellow-800);
 }
 
@@ -21,6 +21,10 @@
     height: 17rem;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.listImageMobile {
+    display: none;
 }
 
 .listContent {
@@ -60,4 +64,14 @@
 
 .listReadMore a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .listImage {
+        display: none;
+    }
+
+    .listArticle {
+        padding: 2rem;
+    }
 }

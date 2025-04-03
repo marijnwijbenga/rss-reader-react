@@ -28,13 +28,19 @@ function ArticleListItem({article}: { article: ArticleInterface }) {
     return (
         <article
             onClick={handleClick}
-            className={styles.article}
+            className={styles.listArticle}
             style={{ backgroundColor: bgColor }}
         >
             <div
                 className={styles.listImage}
                 style={{ backgroundImage: `url(${article.image ? article.image : dummyImage})` }}
             >
+            </div>
+
+            <div className={styles.listImageMobile}>
+                {article.image &&
+                    <img className={styles.listImageMobileImg} src={article.image ? article.image : dummyImage}
+                         alt={article.title}/>}
             </div>
 
             <div className={styles.listContent}>

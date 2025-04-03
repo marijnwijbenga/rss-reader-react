@@ -2,7 +2,6 @@ import {useParams} from "react-router";
 import Article from "../../components/article/Article/Article.tsx";
 import {useEffect, useState} from "react";
 import {ArticleInterface} from "../../interfaces/article.interface.ts";
-import styles from "../Feed/ArticleFeedView.module.css";
 import Alert from "../../components/alert/Alert.tsx";
 import slugify from "slug";
 import {useArticleContext} from "../../context/ArticleContextProvider.tsx";
@@ -23,12 +22,8 @@ function ArticleDetailView() {
         getArticle();
     }, [articles, slug]);
 
-
     return (
-        <main>
-            <div className={styles.title}>
-                <h1>N<span style={{color: 'var(--pastel-red-800)'}}>O</span>S JeugdJournaal</h1>
-            </div>
+        <>
             {loading && <Alert variant="info">Artikelen aan het ophalen..</Alert>}
             {!loading && article && (
                 <>
@@ -39,7 +34,7 @@ function ArticleDetailView() {
             {!loading && !article && !error && (
                 <Alert variant="warning">Artikel niet gevonden!</Alert>
             )}
-        </main>
+        </>
 
     )
 }

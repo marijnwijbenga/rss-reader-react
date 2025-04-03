@@ -8,10 +8,7 @@ function ArticleFeedView() {
     const { articles, loading, error } = useArticleContext();
 
     return (
-        <main>
-            <div className={styles.title}>
-                <h1>N<span style={{color: 'var(--pastel-red-800)'}}>O</span>S JeugdJournaal</h1>
-            </div>
+        <>
             {loading && <Alert variant="info">Artikelen aan het ophalen..</Alert>}
             {!loading && articles.length > 0 && (
                 <>
@@ -33,7 +30,7 @@ function ArticleFeedView() {
                 </>
             )}
             {error && <Alert variant="error">Oeps, er is iets fout gegaan!</Alert>}
-        </main>
+        </>
     )
 }
 

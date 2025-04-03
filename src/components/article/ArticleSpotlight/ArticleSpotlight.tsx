@@ -24,7 +24,7 @@ function ArticleSpotlight({article}: { article: ArticleInterface }) {
             </div>
             <div className={styles.articleSpotlightContent}>
                 <div className={styles.articleSpotlightDate}>
-                    <time dateTime={article.date} >
+                    <time dateTime={article.date}>
                         {article.date && prettyDate(article.date)}
                     </time>
                 </div>
@@ -34,9 +34,7 @@ function ArticleSpotlight({article}: { article: ArticleInterface }) {
                     </h1>
                 </div>
                 <div className={styles.articleSpotlightDescription}>
-
                     {parseDescription(article.description.substring(0, 250).concat('...'))}
-
                 </div>
                 <div className={styles.articleSpotlightReadMore}>
                     <Link to={`/article/${slug(article.title)}`}>
