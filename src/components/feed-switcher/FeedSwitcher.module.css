@@ -12,14 +12,14 @@
     padding: 1rem 2rem;
     border-radius: 2rem;
     border: none;
-    background-color: var(--pastel-purple-200);
+    background-color: var(--pastel-purple-50);
     font-weight: bold;
     color: var(--pastel-purple-800);
 }
 
 .menu button:hover {
     background-color: var(--pastel-purple-800);
-    color: var(--pastel-purple-200);
+    color: var(--pastel-purple-50);
 }
 
 .title {
@@ -29,7 +29,7 @@
 }
 
 .title h1 {
-    color: var(--pastel-purple-600);
+    color: var(--pastel-purple-800);
     font-weight: 800;
     font-size: 3rem;
     background-color: var(--pastel-yellow-300);

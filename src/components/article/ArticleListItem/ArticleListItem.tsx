@@ -48,7 +48,7 @@ function ArticleListItem({article}: { article: ArticleInterface }) {
                     <h1 style={{ color: textColor }}>{article.title}</h1>
                 </div>
                 <div className={styles.listDate}>
-                    <time dateTime={article.date} >
+                    <time dateTime={article.date} style={{ color: textColor }}>
                         {article.date && prettyDate(article.date)}
                     </time>
                 </div>

@@ -12,9 +12,18 @@ function FeedSwitcher({ onFeedSwitch, feed } : { onFeedSwitch: (feed: RSSFeeds) 
     return (
         <>
             <div className={styles.menu}>
-                <button onClick={() => switchFeed(RSSFeeds.Jeugdjournaal)}>Jeugd Journaal</button>
-                <button onClick={() => switchFeed(RSSFeeds.NosNieuwsTech)}>Nos Nieuws Tech</button>
-                <button onClick={() => switchFeed(RSSFeeds.NosNieuwsOpmerkelijk)}>Nos Nieuws Opmerkelijk</button>
+                <button
+                    onClick={() => switchFeed(RSSFeeds.Jeugdjournaal)}
+                    tabIndex={0}
+                >Jeugd Journaal</button>
+                <button
+                    tabIndex={0}
+                    onClick={() => switchFeed(RSSFeeds.NosNieuwsTech)}
+                >Nos Nieuws Tech</button>
+                <button
+                    tabIndex={0}
+                    onClick={() => switchFeed(RSSFeeds.NosNieuwsOpmerkelijk)}
+                >Nos Nieuws Opmerkelijk</button>
             </div>
             <div className={styles.title}>
                 <h1>
