@@ -3,7 +3,6 @@ import parseArticles from "./parse-articles.util.ts";
 import {ArticleInterface} from "../interfaces/article.interface.ts";
 import {RSSFeeds} from "../enums/rss-urls.enum.ts";
 
-// todo make enum of feed
 const fetchArticles = async (feed: string = RSSFeeds.Jeugdjournaal): Promise<ArticleInterface[]> => {
     try {
         const response = await fetch(`${CORS_URL}${feed}`);
