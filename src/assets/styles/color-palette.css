@@ -1,6 +1,8 @@
 :root {
+    --pastel-gray-300: rgb(196, 195, 191);
     --pastel-gray-400: rgb(174, 172, 168);
     --pastel-gray-500: rgb(145, 142, 136);
+    --pastel-gray-800: rgb(82, 80, 76);
 
     --pastel-red-300: rgb(255, 178, 173);
     --pastel-red-800: rgb(168, 34, 26);

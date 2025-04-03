@@ -18,3 +18,8 @@
     color: var(--pastel-blue-800);
 }
 
+.alert--warning {
+    background-color: var(--pastel-yellow-50);
+    color: var(--pastel-yellow-800);
+}
+

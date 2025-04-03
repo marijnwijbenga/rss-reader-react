@@ -1,33 +1,11 @@
-import {useEffect, useState} from "react";
-import {ArticleInterface} from "../../interfaces/article.interface.ts";
 import ArticleSpotlight from "../../components/article/ArticleSpotlight/ArticleSpotlight.tsx";
-import styles from './ArticleFeed.module.css';
+import styles from './ArticleFeedView.module.css';
 import ArticleListItem from "../../components/article/ArticleListItem/ArticleListItem.tsx";
 import Alert from "../../components/alert/Alert.tsx";
-import fetchArticles from "../../util/fetch-articles.util.ts";
+import {useArticleContext} from "../../context/ArticleContextProvider.tsx";
 
 function ArticleFeedView() {
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
-    const [articles, setArticles] = useState<ArticleInterface[]>([]);
-
-    useEffect(() => {
-        const getArticles = async () => {
-            try {
-                const articles = await fetchArticles();
-                setArticles(articles);
-                setLoading(false);
-                setError(false);
-            } catch (error) {
-                console.error(error);
-                setLoading(false);
-                setError(true);
-            }
-        };
-
-        getArticles();
-
-    }, [])
+    const { articles, loading, error } = useArticleContext();
 
     return (
         <main>
@@ -53,7 +31,6 @@ function ArticleFeedView() {
                         )}
                     </section>
                 </>
-
             )}
             {error && <Alert variant="error">Oeps, er is iets fout gegaan!</Alert>}
         </main>

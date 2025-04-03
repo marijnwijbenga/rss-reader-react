@@ -3,19 +3,19 @@
 An RSS feed news reader made with React.
 
 ## todos
-- [ ] use context instead of re-fetching articles in fetchArticle
+- [x] use context instead of re-fetching articles in fetchArticle
 - [x] loading states
-- [x] error handling
-  - [ ] handle empty feed
-  - [ ] handle parse error in parse description
 - [x] style spotlight component
-- [ ] style list component
-- [ ] style feed view page
+- [x] style list component
+- [x] style feed view page
 - [x] handle article detail routing with clean url
 - [ ] style detail view page
 - [ ] style article detail component
 - [ ] add details in readme with features and how to run etc
 - [ ] add rss feed switcher
+- [ ] cleaner word cutoff
+- [ ] skeletons for loading (cards & images)
+- [ ] theme per feed (add tech theme and generic theme)
 
 # Time spent
 I went a bit (~2-4h) over the time limit of 4-6 hours, I couldn't resist to keep polishing and tweaking, it's such a fun assignment!

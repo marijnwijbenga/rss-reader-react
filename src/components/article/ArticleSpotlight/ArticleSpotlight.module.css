@@ -6,7 +6,7 @@
     width: 40%;
     max-width: 34rem;
     min-width: 25rem;
-    height: 46rem;
+    height: 45rem;
     border-radius: 2rem;
     background-color: var(--pastel-yellow-50);
     cursor: pointer;
@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1.2rem;
     padding: 2rem 2rem;
     height: 100%;
     border-radius: 0 0 2rem 2rem;
@@ -45,22 +46,23 @@
     text-wrap: pretty;
 }
 
-.articleSpotlightDescription {
-
+.articleSpotlightDescription h2 {
+    font-size: 1.2rem;
 }
 
-.articleSpotlightReadmore a,
+.articleSpotlightReadMore a,
 .articleSpotlightLink a {
     text-decoration: none;
     color: var(--pastel-purple-800);
+    font-weight: 700;
 }
 
-.articleSpotlightReadmore a:hover,
+.articleSpotlightReadMore a:hover,
 .articleSpotlightLink a:hover {
     text-decoration: underline;
+
     text-decoration-color: var(--pastel-purple-600);
 }
-
 
 .articleSpotlightImage {
     border-radius: 2rem 2rem 0 0;

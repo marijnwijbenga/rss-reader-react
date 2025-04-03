@@ -4,47 +4,60 @@
     gap: 2rem;
     margin: 0 auto 1rem;
     width: 80%;
-    max-width: 80rem;
+    max-width: 72rem;
     border-radius: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+.article:hover {
+    box-shadow: 0 0 0.8rem var(--pastel-yellow-800);
 }
 
 .listImage {
     border-radius: 2rem 0 0 2rem;
     width: 20rem;
     min-width: 20rem;
-    height: 16rem;
+    height: 17rem;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-
 .listContent {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.4rem 0;
 }
 
 .listTitle h1 {
     color: var(--pastel-purple-600);
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-wrap: pretty;
 }
 
 .listDate {
+    color: var(--pastel-gray-800);
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
-.listDescription {
+.listDescription h2 {
+    display: none;
 }
 
-.listReadMore {
+.listDescription p:nth-of-type(2) {
+    display: none;
 }
+
 
 .listReadMore a {
     text-decoration: none;
-    color: var(--pastel-purple-800);
+    font-weight: 700;
 }
 
-.listReadmore a:hover {
+.listReadMore a:hover {
     text-decoration: underline;
-    text-decoration-color: var(--pastel-purple-600);
 }

@@ -3,7 +3,6 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .list {
@@ -40,5 +39,6 @@
     font-size: 2.4rem;
     background-color: var(--pastel-yellow-300);
     padding: 1rem 2rem;
+    margin-bottom: 1rem;
     border-radius: 1rem;
 }
