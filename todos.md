@@ -8,7 +8,8 @@
 - [x] style detail view page
 - [x] style article detail component
 - [x] add rss feed switcher
-- [ ] add details in readme with features and how to run etc
+- [x] add details in readme with features and how to run etc
 - [ ] cleaner word cutoff
 - [ ] skeletons for loading (cards & images)
 - [ ] theme per feed (add tech theme and generic theme)
+- [ ] parse list items (- in p)

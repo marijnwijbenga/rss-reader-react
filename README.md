@@ -15,6 +15,7 @@ An RSS feed newsreader made with React.
 - [ ] cleaner word cutoff
 - [ ] skeletons for loading (cards & images)
 - [ ] theme per feed (add tech theme and generic theme)
+- [ ] parse list items (- in p)
 
 ## Time spent
 I went a bit (~2-4h) over the time limit of 4-6 hours, I couldn't resist to keep polishing and tweaking, it's such a fun assignment!
