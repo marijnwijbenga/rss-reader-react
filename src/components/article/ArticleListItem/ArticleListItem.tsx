@@ -45,7 +45,7 @@ function ArticleListItem({article}: { article: ArticleInterface }) {
 
             <div className={styles.listContent}>
                 <div className={styles.listTitle}>
-                    <h1 style={{ color: textColor }}>{article.title}</h1>
+                    <h2 style={{ color: textColor }}>{article.title}</h2>
                 </div>
                 <div className={styles.listDate}>
                     <time dateTime={article.date} style={{ color: textColor }}>

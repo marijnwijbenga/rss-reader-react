@@ -39,7 +39,7 @@
     font-size: 0.9rem;
 }
 
-.articleSpotlightTitle h1 {
+.articleSpotlightTitle h2 {
     color: var(--pastel-purple-600);
     font-weight: 800;
     font-size: 1.4rem;
@@ -47,7 +47,7 @@
 }
 
 .articleSpotlightDescription h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .articleSpotlightReadMore a,

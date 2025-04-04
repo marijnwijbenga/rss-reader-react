@@ -35,7 +35,7 @@
     padding: 0.4rem 0;
 }
 
-.listTitle h1 {
+.listTitle h2 {
     color: var(--pastel-purple-600);
     font-weight: 800;
     font-size: 1.2rem;

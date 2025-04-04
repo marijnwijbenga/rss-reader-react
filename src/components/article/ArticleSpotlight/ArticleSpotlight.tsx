@@ -29,9 +29,9 @@ function ArticleSpotlight({article}: { article: ArticleInterface }) {
                     </time>
                 </div>
                 <div className={styles.articleSpotlightTitle}>
-                    <h1>
+                    <h2>
                         {article.title}
-                    </h1>
+                    </h2>
                 </div>
                 <div className={styles.articleSpotlightDescription}>
                     {parseDescription(article.description.substring(0, 250).concat('...'))}

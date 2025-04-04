@@ -19,9 +19,9 @@ function Article({article}: { article: ArticleInterface }) {
                     {article.date && <time dateTime={article.date}>{prettyDate(article.date)}</time>}
                 </div>
 
-                <h1 className={styles.articleTitle}>
+                <h2 className={styles.articleTitle}>
                     {article.title}
-                </h1>
+                </h2>
 
                 <div className={styles.articleDescription}>
                     {parseDescription(article.description)}
@@ -30,8 +30,6 @@ function Article({article}: { article: ArticleInterface }) {
                     {article.link && <a href={article.link} target="_blank">Naar het originele artikel</a>}
                 </div>
             </div>
-
-
         </article>
     )
 }
